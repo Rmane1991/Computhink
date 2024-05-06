@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-06T17:45:59 IST" name="Suite" finished-at="2024-05-06T17:46:39 IST" duration-ms="39586">
+    <groups>
+    </groups>
+    <test started-at="2024-05-06T17:45:59 IST" name="Test" finished-at="2024-05-06T17:46:39 IST" duration-ms="39586">
+      <class name="Computhink.Contentverse.CV_LoginTestCase">
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:45:59 IST" name="initalization" finished-at="2024-05-06T17:46:03 IST" duration-ms="3399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="check_InValid_UserName()[pri:1, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:03 IST" name="check_InValid_UserName" finished-at="2024-05-06T17:46:03 IST" duration-ms="914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_InValid_UserName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:04 IST" name="tearDown" finished-at="2024-05-06T17:46:04 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:04 IST" name="initalization" finished-at="2024-05-06T17:46:05 IST" duration-ms="1602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="check_InValid_Password()[pri:2, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:05 IST" name="check_InValid_Password" finished-at="2024-05-06T17:46:06 IST" duration-ms="1004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_InValid_Password -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:06 IST" name="tearDown" finished-at="2024-05-06T17:46:06 IST" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:06 IST" name="initalization" finished-at="2024-05-06T17:46:08 IST" duration-ms="1683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="check_Blank_Username()[pri:3, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:08 IST" name="check_Blank_Username" finished-at="2024-05-06T17:46:08 IST" duration-ms="386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Blank_Username -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:08 IST" name="tearDown" finished-at="2024-05-06T17:46:09 IST" duration-ms="150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:09 IST" name="initalization" finished-at="2024-05-06T17:46:10 IST" duration-ms="1736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="check_Blank_Password()[pri:4, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:10 IST" name="check_Blank_Password" finished-at="2024-05-06T17:46:11 IST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Blank_Password -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:11 IST" name="tearDown" finished-at="2024-05-06T17:46:11 IST" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:11 IST" name="initalization" finished-at="2024-05-06T17:46:13 IST" duration-ms="1646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="check_Select_Room()[pri:5, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:13 IST" name="check_Select_Room" finished-at="2024-05-06T17:46:13 IST" duration-ms="342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_Select_Room -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:13 IST" name="tearDown" finished-at="2024-05-06T17:46:13 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="initalization()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:13 IST" name="initalization" finished-at="2024-05-06T17:46:15 IST" duration-ms="1563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initalization -->
+        <test-method signature="Check_Valid_Credentials()[pri:6, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:15 IST" name="Check_Valid_Credentials" finished-at="2024-05-06T17:46:39 IST" duration-ms="23935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_Valid_Credentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Computhink.Contentverse.CV_LoginTestCase@5b1ebf56]" started-at="2024-05-06T17:46:39 IST" name="tearDown" finished-at="2024-05-06T17:46:39 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Computhink.Contentverse.CV_LoginTestCase -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
