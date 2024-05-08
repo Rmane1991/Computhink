@@ -1,7 +1,6 @@
 package Computhink.Contentverse;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -29,13 +28,13 @@ public class CV_SearchTestCase extends Base{
 		cvLP.Check_Valid_Credentials(sheet.getRow(5).getCell(3).getStringCellValue(),sheet.getRow(5).getCell(5).getStringCellValue(), sheet.getRow(1).getCell(7).getStringCellValue());
 		cvSP.advanceSearch();
 		Thread.sleep(3000);
-		/*
+		
 		cvSP.folderLocation();
 		cvSP.listOfCabinatesPresentInDataBase(sheet.getRow(3).getCell(3).getStringCellValue());
 		cvSP.selectDrawerPresentInCabinet(sheet.getRow(3).getCell(5).getStringCellValue());
 		cvSP.selectFolderPresentInDrawer(sheet.getRow(3).getCell(7).getStringCellValue());
 		cvSP.clickOkButton(); 
-		*/
+		
 		//cvSP.selectDocumentType(getCustomDocumentType());
 		//cvSP.selectDocumentCreator(getCustomDocumentCreator());
 		cvSP.selectDocumentType(sheet.getRow(14).getCell(3).getStringCellValue());
@@ -56,7 +55,8 @@ public class CV_SearchTestCase extends Base{
 	}
 	
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown() 
+	{
 		driver.quit();
 	}
 }

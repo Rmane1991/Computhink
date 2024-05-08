@@ -315,7 +315,9 @@ public class CV_Search extends Utility {
 	
 	public void selectDocumentType(String CustomDocumentType) throws InterruptedException 
 	{	
+		Thread.sleep(3000);
 		ddDocumentType.click();
+		Thread.sleep(3000);
 		for (int i=0; i<ddDocumentTypeOptions.size(); i++) 
 		{
 			try {	
@@ -353,6 +355,7 @@ public class CV_Search extends Utility {
 	
 	public void selectDate() throws InterruptedException 
 	{
+		Thread.sleep(3000);
 		ddCreatedDateFrom.click();
 		currentYear.click();
 		selectYearFrom.click();
@@ -461,6 +464,12 @@ public class CV_Search extends Utility {
 	
 	public void clickOkButton()
 	{
+		try 
+		{
+			Thread.sleep(2000);
+		} catch (InterruptedException e) 
+		{
+		}
 		btnOkBrowseForFolder.click();
 	}
 

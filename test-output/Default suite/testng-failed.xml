@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Computhink.Contentverse.CV_SearchTestCase">
+      <class name="Computhink.Contentverse.CV_SendToWorkflowTestcase">
         <methods>
-          <include name="tearDown"/>
-          <include name="searchDocument"/>
+          <include name="WorflowVerify_By_First_User"/>
+          <include name="WorflowVerify_By_Second_User"/>
           <include name="initalization"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- Computhink.Contentverse.CV_SearchTestCase -->
+      </class> <!-- Computhink.Contentverse.CV_SendToWorkflowTestcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

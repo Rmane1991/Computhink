@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -200,7 +201,7 @@ public class CV_HomePage extends Utility {
 		Thread.sleep(8000);
 		pressEnter();
 		pressUpKeys();
-		keypress(currentTime() + " Above current time is entered by selenium script ");
+		keypress(Keys.ENTER+ currentTime() + Keys.ENTER + " Above current time is entered by selenium script ");
 		Thread.sleep(8000);
 		btndocSave.click();
 		// isDisaplyedW(mesgBoxDocUpdated, 10);

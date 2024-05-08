@@ -31,11 +31,37 @@ public class Base {
 	public WebDriver driver;
 	
 	public void ReadExcel() throws IOException {
-		FileInputStream fis = new FileInputStream(
-				(System.getProperty("user.dir") + "\\src\\main\\java\\cv_resources\\Test_Data.xlsx"));
-		try (XSSFWorkbook wb = new XSSFWorkbook(fis)) {
-			sheet = wb.getSheetAt(0);
-		}
+		FileInputStream fis = new FileInputStream((System.getProperty("user.dir") + "\\src\\main\\java\\cv_resources\\Test_Data.xlsx"));
+		
+		@SuppressWarnings("resource")
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		
+		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+		
+		for (StackTraceElement element : stackTrace) 
+        {
+            String className = element.getClassName();
+           
+            if (className.contains("LoginTestCase"))
+            {
+            	sheet = wb.getSheetAt(0);
+                break;
+            }
+            else if (className.contains("SearchTestCase")) 
+            {
+            	sheet = wb.getSheetAt(1);
+                break;
+			} else if (className.contains("CreateDocumentTest")||className.contains("UpdateExistingFileTest"))
+			{
+				sheet = wb.getSheetAt(2);
+                break;
+			}
+			 else if (className.contains("SendToWorkflowTestcase")) 
+	            {
+	            	sheet = wb.getSheetAt(3);
+	                break;
+				}
+        }
 
 	}
 
