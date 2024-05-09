@@ -11,18 +11,17 @@ import org.testng.Assert;
 
 import cv_resources.Utility;
 
-public class CV_SendToWorkflowPage extends Utility 
-{
+public class CV_SendToWorkflowPage extends Utility {
 
 	public WebDriver driver;
 	Actions ac;
-	public CV_SendToWorkflowPage(WebDriver driver)
-	{
+
+	public CV_SendToWorkflowPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		PageFactory.initElements(driver, this);
-		ac=new Actions(driver);
+		ac = new Actions(driver);
 	}
 
 	@FindBy(xpath = "//div[@id='addPagesDropDown']")
@@ -96,211 +95,193 @@ public class CV_SendToWorkflowPage extends Utility
 
 	@FindBy(xpath = "//button[@class='e-small e-lib e-btn e-control e-primary e-toast-danger']")
 	WebElement btnCloseError;
-	
+
 	@FindBy(xpath = "//button[@id='viewCreatedDocument']")
 	WebElement btnviewDocument;
-	
+
 	@FindBy(xpath = "//span[@id='viewSendToWrkflw']")
 	WebElement BtnsendDocumentWorkflow;
-	
+
 	@FindBy(xpath = "//div[@id='sidbisendworkflow']")
 	WebElement windowavailableworkflow;
-	
-	//@FindBy(xpath ="//td[normalize-space()='ShradhaWorkflow']")
-	//WebElement NameOfWorkflow;
-	
-	
+
 	@FindBy(xpath = "//button[@id='sidbisendworkflowOk']")
 	WebElement btnapplyworkflow;
-	
+
 	@FindBy(xpath = "(//td[@class='e-rowcell'])[3]")
 	WebElement historymsg;
-	
-	//For To do list
-	
+
+	// For To do list
+
 	// First visit on ToDoList.
-		@FindBy(xpath = "//a[@id='myTaskMenu']")
-		WebElement MenuToDoList;
+	@FindBy(xpath = "//a[@id='myTaskMenu']")
+	WebElement MenuToDoList;
 
-		//new items.
-		@FindBy(xpath = "//a[@id='newItems']")
-		WebElement SubMenuNewItems;
-		
-		//search 
-		@FindBy(xpath = "//input[@id='searchTree']")
-		WebElement txtserachtodolist;
+	// new items.
+	@FindBy(xpath = "//a[@id='newItems']")
+	WebElement SubMenuNewItems;
 
-		//Pending items
-		@FindBy(xpath = "//a[@id='todoPending']")
-		WebElement SubMenupendingItems;
+	// search
+	@FindBy(xpath = "//input[@id='searchTree']")
+	WebElement txtserachtodolist;
 
-		// Reviewed items
-		@FindBy(xpath = "//a[@id='todoReviewed']")
-		WebElement SubMenuReviewedItems;
+	// Pending items
+	@FindBy(xpath = "//a[@id='todoPending']")
+	WebElement SubMenupendingItems;
 
-		// All items
-		@FindBy(xpath = "//a[@id='todoAll']")
-		WebElement SubMenuAllItems;
+	// Reviewed items
+	@FindBy(xpath = "//a[@id='todoReviewed']")
+	WebElement SubMenuReviewedItems;
 
-		// Sent items
-		@FindBy(xpath = "//a[@id='todoSentItems']")
-		WebElement SubMenusentitem;
+	// All items
+	@FindBy(xpath = "//a[@id='todoAll']")
+	WebElement SubMenuAllItems;
 
-		// Custom columns
-		@FindBy(xpath = "//a[@id='todoCustomColumns']")
-		WebElement SubMenucustomColumns;
-		
-		// Reset columns
-		@FindBy(xpath = "//a[@id='todoResetColumns']")
-		WebElement SubMenuRecetColumns;
-		
-		//search box
-		@FindBy(xpath = "//input[@class='custom-input']")
-		WebElement Clicksearch;
-		
-		//ok button
-		@FindBy(xpath = "//button[@id='CustomListTodoOK']")
-		WebElement btncustomsave;
-		
-		//Cancel button
-		@FindBy(xpath = "//button[@id='CustomListTodoCancel']")
-	     WebElement btncustomcancel;
-		
-		// Document (After selecting Document)
-		
-		@FindBy(xpath = "//a[@id='documentListSubMenu']")
-	    WebElement clickDocument1;
-		
-		@FindBy(xpath = "//a[@id='multipleViewer']")
-		WebElement ClickView;
-		
-		@FindBy(xpath = "//a[@id='cutid']")
-	    WebElement clickCutDocument;
-		
-		@FindBy(xpath = "//a[@id='copyId']")
-	    WebElement clickCopyDocument;
-		
-		@FindBy(xpath = "//a[@id='pasteid']")
-	    WebElement clickpasteDocument;
-		
-		@FindBy(xpath = "//a[@id='docReferencePaste']")
-	    WebElement clickpasteasrefr;
-		
-		@FindBy(xpath = "//a[@id='referenceBtn']")
-	    WebElement ClickReferences;
-		
-		@FindBy(xpath = "//a[@id='delDocument']")
-	    WebElement ClickDelete;
-		
-		@FindBy(xpath = "//a[@id='documentcreatefav']")
-	    WebElement ClickCrFavorites;
-		
-		@FindBy(xpath = "//a[@id='documentSendTo']")
-	    WebElement Clicksendto;
-		
-		@FindBy(xpath = "(//td)[108]")
-		WebElement downarrowfordocument;
-		
-		@FindBy(xpath = "//*[@id='documentListTable']/tbody/tr[1]/td[3]")
-		WebElement clickOnDocument;
-		
-		//click on send to mail --> SubMenu--> mail
-		
-		@FindBy(xpath = "//a[@id='sendToMail']")
-	    WebElement ClickonMail;
-		
-		//click on send to mail --> SubMenu--> mail-->print
-		
-		@FindBy(xpath = "//a[@id='sendToPrint']")
-	    WebElement Clickprint;
-		
-		//click on send to mail --> SubMenu--> mail-->Export
-		@FindBy(xpath = "//a[@id='sendToExport']")
-	    WebElement ClickDExport;
-		
-		////click on send to mail --> SubMenu--> mail-->SecureLink
-		@FindBy(xpath = "//a[text()='Secure Link...'][1]")
-	    WebElement ClickSecureLink;
-		
-	    //click on send to mail --> SubMenu--> mail-->Generate Document Link
-		@FindBy(xpath = "//a[@id='generateDocumentLink']")
-	    WebElement ClickGenerateDocLink;
-		
-		public WebElement findDocumentElement(String linkText) 
-		{
-			return driver.findElement(By.xpath("//td[normalize-space()='" + linkText + "']"));
-	    }
-		
-		public WebElement findDocumentElementtxt(String linkText) 
-		{
-			return driver.findElement(By.xpath("//*[contains(text(), '" + linkText + "')]"));
-	    }
-		
-		//*[contains(text(), '" + linkText + "')]
-		
-		//@FindBy(linkText = "")
-		//WebElement verifyDOcument;
-		
-		@FindBy(xpath = "//div[@id='workflowModel']")
-		WebElement WindowWorkFLowModel;
-		
-		@FindBy(xpath = "//button[@id='wfactionOk']")
-		WebElement btnokworkflowaccept;
-		
-		@FindBy(xpath = "//textarea[@id='wfcomments']")
-		WebElement txtAreaComment;
-		
-		@FindBy(xpath = "//a[@id='reject']")
-		WebElement btnrejectWorkflow;
-		
-		@FindBy(xpath = "//a[@id='endwf']")
-		WebElement btnEndWorkflow;
-		
-		@FindBy(xpath = "//a[@id='accept']")
-		WebElement btnacceptworkFlow;
-		
-		
-		@FindBy(xpath = "//div[@id='ownershipMessageModel']")
-		WebElement WinDocumentInWF;
-		
-		@FindBy(xpath = "//button[@id='ownershipMessageModelOk']")
-		WebElement btnOkDocumentInWF;
-		
-		@FindBy(xpath = "(//td[@class=' customDocName'])[1]")
-		WebElement clickondocument;
-		
-		
-		@FindBy(xpath = "//span[normalize-space()='History']")
-		WebElement tabhistory;
-		
-		public WebElement findDocumentElementPlusIcon(String linkText) 
-		{
-			return driver.findElement(By.xpath("//*[contains(text(), '" + linkText + "')]/preceding-sibling::ins[@class='jstree-icon']"));
-		}
-		
-		public void openDocs(String CabinetName,String DrawerName,String FolderName) throws InterruptedException 
-		{
-			Thread.sleep(2000);
-			//Cabinet
-			findDocumentElementPlusIcon(CabinetName).click();
-			Thread.sleep(500);
-			//IconPlusCabinet.click();
-			//Drawer
-			findDocumentElementPlusIcon(DrawerName).click();
-			Thread.sleep(500);
-			//IconPlusDrawer.click();
-			//Folder
-			findDocumentElementtxt(FolderName).click();
-			Thread.sleep(500);
-			//isVisible(FolderNameWord, 15);
-			//FolderNameWord.click();
-			Thread.sleep(2000);
-		}
+	// Sent items
+	@FindBy(xpath = "//a[@id='todoSentItems']")
+	WebElement SubMenusentitem;
 
-	public void Worflow(String DocumentName,String UserName,String WFName,String CabinetName,String DrawerName,String FolderName)  throws InterruptedException 
-	
+	// Custom columns
+	@FindBy(xpath = "//a[@id='todoCustomColumns']")
+	WebElement SubMenucustomColumns;
+
+	// Reset columns
+	@FindBy(xpath = "//a[@id='todoResetColumns']")
+	WebElement SubMenuRecetColumns;
+
+	// search box
+	@FindBy(xpath = "//input[@class='custom-input']")
+	WebElement Clicksearch;
+
+	// ok button
+	@FindBy(xpath = "//button[@id='CustomListTodoOK']")
+	WebElement btncustomsave;
+
+	// Cancel button
+	@FindBy(xpath = "//button[@id='CustomListTodoCancel']")
+	WebElement btncustomcancel;
+
+	// Document (After selecting Document)
+
+	@FindBy(xpath = "//a[@id='documentListSubMenu']")
+	WebElement clickDocument1;
+
+	@FindBy(xpath = "//a[@id='multipleViewer']")
+	WebElement ClickView;
+
+	@FindBy(xpath = "//a[@id='cutid']")
+	WebElement clickCutDocument;
+
+	@FindBy(xpath = "//a[@id='copyId']")
+	WebElement clickCopyDocument;
+
+	@FindBy(xpath = "//a[@id='pasteid']")
+	WebElement clickpasteDocument;
+
+	@FindBy(xpath = "//a[@id='docReferencePaste']")
+	WebElement clickpasteasrefr;
+
+	@FindBy(xpath = "//a[@id='referenceBtn']")
+	WebElement ClickReferences;
+
+	@FindBy(xpath = "//a[@id='delDocument']")
+	WebElement ClickDelete;
+
+	@FindBy(xpath = "//a[@id='documentcreatefav']")
+	WebElement ClickCrFavorites;
+
+	@FindBy(xpath = "//a[@id='documentSendTo']")
+	WebElement Clicksendto;
+
+	@FindBy(xpath = "(//td)[108]")
+	WebElement downarrowfordocument;
+
+	@FindBy(xpath = "//*[@id='documentListTable']/tbody/tr[1]/td[3]")
+	WebElement clickOnDocument;
+
+	// click on send to mail --> SubMenu--> mail
+
+	@FindBy(xpath = "//a[@id='sendToMail']")
+	WebElement ClickonMail;
+
+	// click on send to mail --> SubMenu--> mail-->print
+
+	@FindBy(xpath = "//a[@id='sendToPrint']")
+	WebElement Clickprint;
+
+	// click on send to mail --> SubMenu--> mail-->Export
+	@FindBy(xpath = "//a[@id='sendToExport']")
+	WebElement ClickDExport;
+
+	//// click on send to mail --> SubMenu--> mail-->SecureLink
+	@FindBy(xpath = "//a[text()='Secure Link...'][1]")
+	WebElement ClickSecureLink;
+
+	// click on send to mail --> SubMenu--> mail-->Generate Document Link
+	@FindBy(xpath = "//a[@id='generateDocumentLink']")
+	WebElement ClickGenerateDocLink;
+
+	public WebElement findDocumentElement(String linkText) {
+		return driver.findElement(By.xpath("//td[normalize-space()='" + linkText + "']"));
+	}
+
+	public WebElement findDocumentElementtxt(String linkText) {
+		return driver.findElement(By.xpath("//*[contains(text(), '" + linkText + "')]"));
+	}
+
+	@FindBy(xpath = "//div[@id='workflowModel']")
+	WebElement WindowWorkFLowModel;
+
+	@FindBy(xpath = "//button[@id='wfactionOk']")
+	WebElement btnokworkflowaccept;
+
+	@FindBy(xpath = "//textarea[@id='wfcomments']")
+	WebElement txtAreaComment;
+
+	@FindBy(xpath = "//a[@id='reject']")
+	WebElement btnrejectWorkflow;
+
+	@FindBy(xpath = "//a[@id='endwf']")
+	WebElement btnEndWorkflow;
+
+	@FindBy(xpath = "//a[@id='accept']")
+	WebElement btnacceptworkFlow;
+
+	@FindBy(xpath = "//div[@id='ownershipMessageModel']")
+	WebElement WinDocumentInWF;
+
+	@FindBy(xpath = "//button[@id='ownershipMessageModelOk']")
+	WebElement btnOkDocumentInWF;
+
+	@FindBy(xpath = "(//td[@class=' customDocName'])[1]")
+	WebElement clickondocument;
+
+	@FindBy(xpath = "//span[normalize-space()='History']")
+	WebElement tabhistory;
+
+	public WebElement findDocumentElementPlusIcon(String linkText) {
+		return driver.findElement(
+				By.xpath("//*[contains(text(), '" + linkText + "')]/preceding-sibling::ins[@class='jstree-icon']"));
+	}
+
+	public void openDocs(String CabinetName, String DrawerName, String FolderName) throws InterruptedException {
+		Thread.sleep(2000);
+		// Click On Cabinet
+		findDocumentElementPlusIcon(CabinetName).click();
+		Thread.sleep(500);
+		// Click On Drawer
+		findDocumentElementPlusIcon(DrawerName).click();
+		Thread.sleep(500);
+		// Click On Folder
+		findDocumentElementtxt(FolderName).click();
+		Thread.sleep(2000);
+	}
+
+	public void Worflow(String DocumentName, String UserName, String WFName, String CabinetName, String DrawerName,
+			String FolderName) throws InterruptedException
+
 	{
-		openDocs(CabinetName,DrawerName,FolderName);
+		openDocs(CabinetName, DrawerName, FolderName);
 		SubMenuCreateNewDocument.click();
 		Thread.sleep(3000);
 		Dropdownbytxt(ddDocumenttype, "CVReports");
@@ -308,257 +289,122 @@ public class CV_SendToWorkflowPage extends Utility
 		txtReportName.sendKeys(DocumentName);
 		isDisaplyedW(SubMenuNwdocument, 10);
 		ac.moveToElement(SubMenuNwdocument).perform();
-		UploadNewFile.sendKeys((System.getProperty("user.dir")+"\\downloadFiles\\SmokeTestCase.xlsx"));
+		UploadNewFile.sendKeys((System.getProperty("user.dir") + "\\downloadFiles\\SmokeTestCase.xlsx"));
 		Thread.sleep(4000);
-		
-		if (isAlertPresent(driver) == true) 
-		{
+
+		if (isAlertPresent(driver) == true) {
 			driver.switchTo().alert().accept();
 			Thread.sleep(4000);
 		}
-		
+
 		isDisaplyedW(btnCreateDocument, 10);
 		btnCreateDocument.click();
 		Thread.sleep(3000);
-		
-		String Createmsg=FileUploadlblMessage.getText();
-		if(Createmsg.contains("Document created successfully"))
-		{
+
+		String Createmsg = FileUploadlblMessage.getText();
+		if (Createmsg.contains("Document created successfully")) {
 			System.out.println("Document created successfully");
 			btnviewDocument.click();
 			BtnsendDocumentWorkflow.click();
 			isVisible(windowavailableworkflow, 10);
-			
+
 			findDocumentElement(WFName).click();
 			Thread.sleep(3000);
 			btnapplyworkflow.click();
 			Thread.sleep(3000);
 			tabhistory.click();
 			Thread.sleep(3000);
-			 String verifymsghistory=historymsg.getText();
-			 if(verifymsghistory.equals("Workflow Initiated by "+UserName))
-			 {
-				System.out.println(verifymsghistory); 
-			 }
-			 else 
-			 {
-				 Assert.fail("Document Not send to Workflow! Actual text: " + verifymsghistory);
-			 }
-		}
-		else 
-		{
+			String verifymsghistory = historymsg.getText();
+			if (verifymsghistory.equals("Workflow Initiated by " + UserName)) {
+				System.out.println(verifymsghistory);
+			} else {
+				Assert.fail("Document Not send to Workflow! Actual text: " + verifymsghistory);
+			}
+		} else {
 			System.out.println("Document Not uploaded");
 		}
-		System.out.println("Set Sucescss To :- "+ WFName);
+		System.out.println("Set Sucescss To :- " + WFName);
 	}
 
-	public void WorflowVerify_By_First_User(String Status,String DocumentName,String UserName,String CabinetName,String DrawerName,String FolderName) throws InterruptedException
-	{
-		CV_SendToWorkflowPage STF=new CV_SendToWorkflowPage(driver);
+	public void WorflowVerify(String Status, String DocumentName, String UserName, String CabinetName,
+			String DrawerName, String FolderName) throws InterruptedException {
+		CV_SendToWorkflowPage STF = new CV_SendToWorkflowPage(driver);
 		WebElement verifyDOcument = null;
-		//WebElement verifyDOcument2 = null;
 		moveToElement(MenuToDoList);
 		SubMenuNewItems.click();
-		
-		
-		try 
-		{
-			verifyDOcument=STF.findDocumentElement(DocumentName);
+
+		try {
+			verifyDOcument = STF.findDocumentElement(DocumentName);
 			verifyDOcument.click();
-		} catch (Exception e) 
-		
+		} catch (Exception e)
+
 		{
 			ac.moveToElement(MenuToDoList).perform();
 			SubMenupendingItems.click();
-			verifyDOcument=STF.findDocumentElement(DocumentName);
+			verifyDOcument = STF.findDocumentElement(DocumentName);
 			verifyDOcument.click();
 		}
-		
 
 		isDisaplyedW(btnacceptworkFlow, 10);
-		
-		if(Status.contains("Accept"))
-		{
+
+		if (Status.contains("Accept")) {
 			btnacceptworkFlow.click();
 			isDisaplyedW(WindowWorkFLowModel, 10);
 			txtAreaComment.sendKeys("This Done by Automation");
 			btnokworkflowaccept.click();
 			Thread.sleep(3000);
-			openDocs(CabinetName,DrawerName,FolderName);
-			
+			openDocs(CabinetName, DrawerName, FolderName);
+
 			Thread.sleep(2000);
 			clickOnDocument.click();
 			Thread.sleep(2000);
-			/*
-			try 
-			{
-				verifyDOcument2=STF.findDocumentElementtxt(DocumentName);
-				verifyDOcument2.click();
-			} catch (Exception e) {}
-			*/
-			//WebElement verifyDOcument2=STF.findDocumentElement(DocumentName);
-			//verifyDOcument2.click();
-			
-			if(WinDocumentInWF.isDisplayed()==true)
-			{
+
+			if (WinDocumentInWF.isDisplayed() == true) {
 				btnOkDocumentInWF.click();
 			}
 			Thread.sleep(3000);
 			tabhistory.click();
 			Thread.sleep(3000);
-			 String verifymsghistory=historymsg.getText();
-			 if(verifymsghistory.equals("Document has been Approved by "+UserName))
-			 {
-				System.out.println(verifymsghistory); 
-			 }
-			 else 
-			 {
-				 Assert.fail("Document Not approved by First User! Actual text: " + verifymsghistory);
-			 }
-			
-			 /*
-			if(verifyDOcument.isDisplayed()==false)
-			{
-				System.out.println("Document Accepted By first User");
+			String verifymsghistory = historymsg.getText();
+			if (verifymsghistory.equals("Document has been Approved by " + UserName)) {
+				System.out.println(verifymsghistory);
+			} else {
+				Assert.fail("Document Not approved by First User! Actual text: " + verifymsghistory);
 			}
-			*/
+
 		}
-		if(Status.contains("reject"))
-		{
+		if (Status.contains("reject")) {
 			Thread.sleep(3000);
 			btnrejectWorkflow.click();
 			Thread.sleep(4000);
-			txtAreaComment.sendKeys("This Document rejected by User :- "+UserName);
+			txtAreaComment.sendKeys("This Document rejected by User :- " + UserName);
 			btnokworkflowaccept.click();
 			Thread.sleep(3000);
-			
+
 		}
-		
-		if(Status.contains("End Workflow"))
-		{
+
+		if (Status.contains("End Workflow")) {
 			btnrejectWorkflow.click();
 			txtAreaComment.sendKeys("This Document rejected by Automation");
 			btnokworkflowaccept.click();
-			if(verifyDOcument.isDisplayed()==false)
-			{
+			if (verifyDOcument.isDisplayed() == false) {
 				System.out.println("Document Rejected By first USer");
 			}
-			
+
 		}
-		
+
 	}
 
-	
-	public void WorflowVerify_By_Second_User(String Status,String DocumentName,String UserName,String CabinetName,String DrawerName,String FolderName) throws InterruptedException
-	{
-
-		//CV_SendToWorkflowPage STF=new CV_SendToWorkflowPage(driver);
-		//WebElement verifyDOcument = null;
-		//WebElement verifyDOcument2 = null;
-		ac.moveToElement(MenuToDoList).perform();
-		SubMenuNewItems.click();
-		
-		
-		try 
-		{
-			findDocumentElement(DocumentName).click();
-			
-			//verifyDOcument=STF.findDocumentElement(DocumentName);
-			//verifyDOcument.click();
-		} catch (Exception e) 
-		
-		{
-			ac.moveToElement(MenuToDoList).perform();
-			SubMenupendingItems.click();
-			findDocumentElement(DocumentName).click();
-			//verifyDOcument=STF.findDocumentElement(DocumentName);
-			//verifyDOcument.click();
-		}
-		
-
-		isDisaplyedW(btnacceptworkFlow, 10);
-		
-		if(Status.contains("Accept"))
-		{
-			btnacceptworkFlow.click();
-			isDisaplyedW(WindowWorkFLowModel, 10);
-			txtAreaComment.sendKeys("This Done by Automation");
-			btnokworkflowaccept.click();
-			Thread.sleep(3000);
-			openDocs(CabinetName,DrawerName,FolderName);
-			
-			Thread.sleep(2000);
-			clickOnDocument.click();
-			Thread.sleep(2000);
-			
-			//WebElement verifyDOcument_02=STF.findDocumentElement(DocumentName);;
-			//verifyDOcument_02.click();
-			if(WinDocumentInWF.isDisplayed()==true)
-			{
-				btnOkDocumentInWF.click();
-			}
-			
-			Thread.sleep(3000);
-			tabhistory.click();
-			Thread.sleep(3000);
-			 String verifymsghistory=historymsg.getText();
-			 if(verifymsghistory.equals("Document has been Approved by "+UserName))
-			 {
-				System.out.println(verifymsghistory); 
-			 }
-			 else 
-			 {
-				 Assert.fail("Document Not approved by First User! Actual text: " + verifymsghistory);
-			 }
-			
-			 /*
-			if(verifyDOcument.isDisplayed()==false)
-			{
-				System.out.println("Document Accepted By first User");
-			}
-			*/
-		}
-		if(Status.contains("reject"))
-		{
-
-			Thread.sleep(2000);
-			btnrejectWorkflow.click();
-			Thread.sleep(3000);
-			txtAreaComment.sendKeys("This Document rejected by User :- "+UserName);
-			btnokworkflowaccept.click();
-			Thread.sleep(3000);
-			
-		}
-		
-		if(Status.contains("End Workflow"))
-		{
-			btnrejectWorkflow.click();
-			txtAreaComment.sendKeys("This Document rejected by Automation");
-			btnokworkflowaccept.click();
-			//if(verifyDOcument.isDisplayed()==false)
-			//{
-            //	System.out.println("Document Rejected By first USer");
-			//}
-	
-		}
-		
-	}
-
-	
-	public void Verify_Reject_Workflow(String DocumentName) throws InterruptedException 
-	{
+	public void Verify_Reject_Workflow(String DocumentName) throws InterruptedException {
 		ac.moveToElement(MenuToDoList).perform();
 		SubMenuReviewedItems.click();
 		Thread.sleep(2000);
-		WebElement tobeverify= findDocumentElementtxt(DocumentName);
+		WebElement tobeverify = findDocumentElementtxt(DocumentName);
 		Thread.sleep(2000);
-		if(tobeverify.isDisplayed()==true)
-		{
+		if (tobeverify.isDisplayed() == true) {
 			System.out.println("Document Reject Testcase Passed and File present into reviewed Items");
 		}
-		
-		
+
 	}
-	
-	
+
 }

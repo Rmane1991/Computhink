@@ -5,6 +5,8 @@
     <classes>
       <class name="Computhink.Contentverse.CV_SendToWorkflowTestcase">
         <methods>
+          <include name="SendToWorkFlow"/>
+          <include name="WorflowVerify_Reject"/>
           <include name="WorflowVerify_By_First_User"/>
           <include name="WorflowVerify_By_Second_User"/>
           <include name="initalization"/>

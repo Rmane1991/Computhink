@@ -58,7 +58,7 @@ public class CV_SendToWorkflowTestcase extends Base {
 										   sheet.getRow(1).getCell(7).getStringCellValue());
 		System.out.println("Workflow Verify By First User Started UserName:-" + 
 					                       sheet.getRow(9).getCell(3).getStringCellValue());
-		sendWF.WorflowVerify_By_First_User(sheet.getRow(9).getCell(7).getStringCellValue(),
+		sendWF.WorflowVerify(sheet.getRow(9).getCell(7).getStringCellValue(),
 										   sheet.getRow(7).getCell(3).getStringCellValue(), 
 										   sheet.getRow(9).getCell(3).getStringCellValue(),
 										   sheet.getRow(5).getCell(3).getStringCellValue(),
@@ -78,7 +78,7 @@ public class CV_SendToWorkflowTestcase extends Base {
 			login_page.Check_Valid_Credentials(sheet.getRow(9).getCell(9).getStringCellValue(),
 					sheet.getRow(9).getCell(11).getStringCellValue(), sheet.getRow(1).getCell(7).getStringCellValue());
 			System.out.println("Workflow Verify By Second User Started of UserName:-"+ sheet.getRow(9).getCell(9).getStringCellValue());
-			sendWF.WorflowVerify_By_Second_User(sheet.getRow(9).getCell(13).getStringCellValue(),
+			sendWF.WorflowVerify(sheet.getRow(9).getCell(13).getStringCellValue(),
 								                sheet.getRow(7).getCell(3).getStringCellValue(),
 								                sheet.getRow(9).getCell(9).getStringCellValue(),
 												sheet.getRow(5).getCell(3).getStringCellValue(),
